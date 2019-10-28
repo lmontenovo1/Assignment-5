@@ -3,6 +3,10 @@
 # 2019-10-03
 # https://jfukuyama.github.io/teaching/stat610/assignments/lab4.pdf
 
+library.path = c("C:/Users/Pat C/Documents/R/win-library/3.5", "C:/Program Files/R/R-3.5.2/library")
+
+library('reshape2', lib.loc = library.path)
+
 # --- functions --- #
 
 #' @param x (numeric) vector of same length as y
