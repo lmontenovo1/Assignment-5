@@ -1,6 +1,6 @@
 #benchmark
 
-install.packages('microbenchmark')
+#install.packages('microbenchmark')
 require(microbenchmark)
 
 microbenchmark(llr(x, y, z, omega))
