@@ -3,4 +3,4 @@
 install.packages('microbenchmark')
 require(microbenchmark)
 
-cat(microbenchmark(llr,compute_f_hat))
+microbenchmark(llr(x, y, z, omega))
