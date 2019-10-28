@@ -27,10 +27,7 @@ llr = function(x, y, z, omega) {
 compute_f_hat = function(z, x, y, omega) {
   Wz = make_weight_matrix(z, x, omega)
   X = make_predictor_matrix(x)
-  matrix_mult = function(i,j){
-    return(i%*%j)
-  }
-  new_1 = apply(X,2,"*",Wz)
+  new_1 = sweep(X,c(1,2),Wz,FUN = '*')
   new_2 = Wz*y
   f_hat = c(1, z) %*% solve(t(X) %*% new_1) %*% t(X) %*% new_2
   return(f_hat)
